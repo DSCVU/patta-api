@@ -32,3 +32,9 @@
 en:
   hello: "Hello world"
   app_name: "Patta"
+
+  errors:
+    models:
+      user:
+        format_email: "is not a valid. Please provide valid Email to continue."
+        format_password: 'must be 6 to 72 characters must contain a number.'
