@@ -15,8 +15,6 @@ gem 'jbuilder', '2.9.1'
 gem 'bootsnap', '1.4.5', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors', '1.1.1'
-# for automatted tests
-gem 'travis', '~> 1.8', '>= 1.8.10'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
