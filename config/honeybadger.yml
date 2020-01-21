@@ -1,0 +1,6 @@
+---
+api_key: Rails.application.credentials.honeybadger_api
+development:
+  report_data: true
+test:
+  report_data: true

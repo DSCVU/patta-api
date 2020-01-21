@@ -15,6 +15,8 @@ gem 'jbuilder', '2.9.1'
 gem 'bootsnap', '1.4.5', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors', '1.1.1'
+# adding error tracker
+gem 'honeybadger', '~> 4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -30,6 +32,8 @@ group :development do
   gem 'spring', '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
   gem 'spring-commands-rspec', '1.0.4'
+  # to view emails in browser
+  gem 'letter_opener', '1.7.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
