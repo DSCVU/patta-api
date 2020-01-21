@@ -82,10 +82,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 # Adding headers to request helper
-#def sign_in_test_headers(session)
-#  headers = {}
-#  headers['ACCEPT'] = 'application/json'
-#  headers['Authorization'] = 'Bearer ' + JsonWebToken.encode(user_id: session.user_id, token: session.token).to_s
-#  headers['ApiKey'] = ENV['API_KEY']
-#  headers
-#end
+def sign_in_test_headers(user)
+  headers = {}
+  headers["ACCEPT"] = "application/json"
+  headers["Authorization"] = "Bearer " + JsonWebToken.encode(user_id: user.id).to_s
+  headers
+end
