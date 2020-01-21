@@ -38,9 +38,15 @@ en:
     insufficient_params: "The required params are not present to continue."
     internal_server_error: "There was an internal server error. The Admin has been informed. Please try again later."
     not_found: "Sorry your requested record could not be found in the system."
+
     token:
       not_created: "Sorry there was an error signing you in."
+    
     models:
       user:
         format_email: "is not a valid. Please provide valid Email to continue."
         format_password: 'must be 6 to 72 characters must contain a number.'
+    
+    controllers:
+      auth:
+        invalid_credentials: 'Email or Password is wrong to continue.'
