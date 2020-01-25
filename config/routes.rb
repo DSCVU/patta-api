@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   match "/404", to: "error/errors#not_found", via: :all
   match "/500", to: "error/errors#internal_server_error", via: :all
 
+  get '/rest/docs' => redirect('/swagger/dist/index.html?url=/oas.json')
+
   namespace :v1 do
     namespace :auth do
       post "sign_up", to: "registrations#create"
