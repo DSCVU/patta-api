@@ -2,7 +2,7 @@
 
 lock '3.11.0'
 
-set :application, 'coach-string-api'
+set :application, 'patta-api'
 set :repo_url, 'git@github.com:DSCVU/patta-api.git'
 # Default value for :format is :airbrussh.
 set :format, :airbrussh

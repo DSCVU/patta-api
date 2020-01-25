@@ -61,8 +61,8 @@
 #   }
 set :stage, :production
 set :rails_env, :production
-set :deploy_to, "/home/deploy/apis/patta-api"
+set :deploy_to, "/home/sulmanweb/apis/patta-api"
 set :branch, "master"
 # set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 # set :whenever_roles, %w{web app db}
-server "206.189.91.234", user: "deploy", roles: %w[web app db]
+server "34.87.102.132", user: "sulmanweb", roles: %w[web app db]
