@@ -1,28 +1,28 @@
 # frozen_string_literal: true
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require File.expand_path('../config/environment', __dir__)
-ENV['RAILS_ENV'] ||= 'test'
-require 'rspec/rails'
-require 'spec_helper'
+require File.expand_path("../config/environment", __dir__)
+ENV["RAILS_ENV"] ||= "test"
+require "rspec/rails"
+require "spec_helper"
 # should a matcher settings
 #require 'shoulda/matchers'
 #require 'pundit/rspec'
 #require "action_cable/testing/rspec"
 include ActiveJob::TestHelper
 
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-    with.library :rails
-  end
-end
+# Shoulda::Matchers.configure do |config|
+#   config.integrate do |with|
+#     with.test_framework :rspec
+#     with.library :rails
+#   end
+# end
 
 FactoryBot::SyntaxRunner.class_eval do
   include ActionDispatch::TestProcess
 end
 # Prevent database truncation if the environment is production
-abort('The Rails environment is running in production mode!') if Rails.env.production?
+abort("The Rails environment is running in production mode!") if Rails.env.production?
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -72,7 +72,7 @@ RSpec.configure do |config|
 
   # for paperclip
   config.after(:suite) do
-    FileUtils.rm_rf(Rails.root.join('tmp', 'storage'))
+    FileUtils.rm_rf(Rails.root.join("tmp", "storage"))
     # FileUtils.rm_rf("#{::Rails.root}/tmp/storage")
   end
 
@@ -82,10 +82,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 # Adding headers to request helper
-#def sign_in_test_headers(session)
-#  headers = {}
-#  headers['ACCEPT'] = 'application/json'
-#  headers['Authorization'] = 'Bearer ' + JsonWebToken.encode(user_id: session.user_id, token: session.token).to_s
-#  headers['ApiKey'] = ENV['API_KEY']
-#  headers
-#end
+def sign_in_test_headers(user)
+  headers = {}
+  headers["ACCEPT"] = "application/json"
+  headers["Authorization"] = "Bearer " + JsonWebToken.encode(user_id: user.id).to_s
+  headers
+end
