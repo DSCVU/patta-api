@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -41,5 +41,6 @@ module PattaApi
                        routing_specs: false,
                        controller_specs: false
     end
+    config.active_support.deprecation = :silence
   end
 end

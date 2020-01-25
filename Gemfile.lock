@@ -58,6 +58,7 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.13)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -79,6 +80,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
+    jwt (2.2.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -184,11 +186,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.13)
   bootsnap (= 1.4.5)
   byebug (= 11.1.0)
   factory_bot_rails (= 5.1.1)
   honeybadger (~> 4.0)
   jbuilder (= 2.9.1)
+  jwt (= 2.2.1)
   letter_opener (= 1.7.0)
   listen (= 3.2.1)
   pg (= 1.2.2)
