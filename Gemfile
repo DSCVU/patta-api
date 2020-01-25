@@ -38,6 +38,15 @@ group :development do
   gem "spring-commands-rspec", "1.0.4"
   # to view emails in browser
   gem "letter_opener", "1.7.0"
+  # for deployment
+  gem 'capistrano', '3.11.2'
+  gem 'capistrano-rails', '1.4.0'
+  gem 'capistrano-rbenv', '2.1.6'
+  gem 'capistrano-passenger', '0.2.0'
+  gem 'capistrano-rails-console', '2.3.0'
+  gem 'airbrussh', '1.4.0'
+  gem 'ed25519', '1.2.4'
+  gem 'bcrypt_pbkdf', '1.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
